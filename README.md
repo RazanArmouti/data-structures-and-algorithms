@@ -23,4 +23,5 @@ To run your tests
 |Code number |  Content |
 | ------------ | -------------|
 | 1  | [array reverse](./python/code_challenges/array-reverse/README.md)|
+| 2  | [array insert shift](./python/code_challenges/array-insert-shift/README.md)|
 
