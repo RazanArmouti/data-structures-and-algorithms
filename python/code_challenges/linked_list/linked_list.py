@@ -86,6 +86,70 @@ class linkedList:
         formattedNode+= "NULL"
         return formattedNode
 
+    def append(self,value):
+        """
+        this method to add nodes in the end of the list
+        """
+        node=Node(value)
+        currentNode=self.head
+        if currentNode:
+            while currentNode.next:
+                currentNode=currentNode.next
+            currentNode.next=node
+        else:
+            self.head=node
+
+    def insert_before(self,value, newValue):
+        """
+        adds a new node with the given new value immediately before the first node that has the value specified
+        """
+        currentnode=self.head
+        if not currentnode:
+            return "NULL"
+        while currentnode.next:
+            if currentnode.next.value==value:
+                newNode=Node(newValue)
+                newNode.next=currentnode.next
+                currentnode.next=newNode
+        currentnode=currentnode.next
+        # newNode = Node(newValue)
+        # node = self.head
+        # if node == None:
+        #     return "NULL"
+        # else:
+        #     found = None
+        #     # search nodes
+        #     while node:
+        #         if node.next == value:
+        #             found = True
+        #             beforeInsert = node
+        #             afterInsert = node.next
+        #             beforeInsert.next = newNode
+        #             newNode.next = afterInsert # sets new node's next to target node
+        #             node = node.next # continues through while loop
+        #         else:
+        #             node = node.next
+            #if found != True:
+                #print('Your target node of {} was not found in the list!'.format(newValue))
+
+    def insert_after(self,value,newValue):
+        """
+        adds a new node with the given new value immediately after the first node that has the value specified
+        """
+        currentNode=self.head
+        if not currentNode.next:
+            return 'the linkedlist is empty'
+        while currentNode.next:
+            if currentNode.value==value:
+                newNode=Node(value)
+                newNode.next=currentNode.next
+                currentNode.next=newNode
+        currentNode=currentNode.next
+        #pass
+
+
+
+
 if __name__ =="__main__":
     fNode =linkedList()
     fNode.insert(99)
