@@ -10,4 +10,4 @@
  space complexity :O(1)
 
 ## API
- Navigate to python/code_challenges then run poetry install then convert the shell to poetry shell and run pytest
+ Navigate to python/code_challenges then run poetry install then convert the shell to poetry shell and run pytest.
