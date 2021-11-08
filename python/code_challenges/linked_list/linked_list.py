@@ -112,25 +112,7 @@ class linkedList:
                 newNode.next=currentnode.next
                 currentnode.next=newNode
         currentnode=currentnode.next
-        # newNode = Node(newValue)
-        # node = self.head
-        # if node == None:
-        #     return "NULL"
-        # else:
-        #     found = None
-        #     # search nodes
-        #     while node:
-        #         if node.next == value:
-        #             found = True
-        #             beforeInsert = node
-        #             afterInsert = node.next
-        #             beforeInsert.next = newNode
-        #             newNode.next = afterInsert # sets new node's next to target node
-        #             node = node.next # continues through while loop
-        #         else:
-        #             node = node.next
-            #if found != True:
-                #print('Your target node of {} was not found in the list!'.format(newValue))
+
 
     def insert_after(self,value,newValue):
         """
@@ -147,14 +129,45 @@ class linkedList:
         currentNode=currentNode.next
         #pass
 
+    def kthFromEnd(self,k):
+        """
+        This method return the node’s value that is k places from the tail of the linked list.
+        argument: a number, k, as a parameter.
+
+        """
+        current =self.head
+        length = 1
+        while current.next:
+            length += 1
+            current = current.next
+        current = self.head
+        if k < 0:
+            raise Exception("k must be non-negative number")
+        elif k >= length:
+            raise Exception('Index out of range')
+        value = length-k-1
+        for i in range(length):
+            if i == value:
+                result=current.value
+                return result
+            current = current.next
 
 
 
 if __name__ =="__main__":
-    fNode =linkedList()
-    fNode.insert(99)
-    print(fNode)
-
+    print("razzan")
+    ll =linkedList()
+    ll.insert(1)
+    ll.insert(3)
+    ll.insert(4)
+    ll.insert(7)
+    print(ll.__str__())
+    x=ll.kthFromEnd(0)
+    print(x)
+    ll.insert_before(3,5)
+    print(ll.__str__())
+    ll.insert_after(3,7)
+    print(ll.__str__())
 
 
 

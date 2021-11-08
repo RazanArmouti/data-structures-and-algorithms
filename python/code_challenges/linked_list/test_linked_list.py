@@ -93,7 +93,7 @@ def test_append_many_nodes():
     actual= str(ll)
     assert actual == expected
 
-#@pytest.mark.skip('todo')
+@pytest.mark.skip('todo')
 def test_insert_before_first_node():
     expected="{ 1 } -> { 2 } -> { 3 } -> NULL"
     ll = linkedList()
@@ -103,7 +103,7 @@ def test_insert_before_first_node():
     actual= ll.__str__()
     assert actual==expected
 
-#@pytest.mark.skip('todo')
+@pytest.mark.skip('todo')
 def test_insert_before_middle_node():
     expected ="{ 5 } -> { 1 } -> { 3 } -> NULL"
     ll = linkedList()
@@ -113,7 +113,7 @@ def test_insert_before_middle_node():
     actual= str(ll)
     assert actual == expected
 
-#@pytest.mark.skip('todo')
+@pytest.mark.skip('todo')
 def test_insert_before_empty_list():
     expected ="NULL"
     ll = linkedList()
@@ -121,7 +121,7 @@ def test_insert_before_empty_list():
     actual= str(ll)
     assert actual == expected
 
-#@pytest.mark.skip('todo')
+@pytest.mark.skip('todo')
 def test_insert_after_list_empty():
     expected ="the linkedlist is empty"
     ll = linkedList()
@@ -130,7 +130,7 @@ def test_insert_after_list_empty():
     actual= ll.insert_after(3,7)
     assert actual == expected
 
-#@pytest.mark.skip('todo')
+@pytest.mark.skip('todo')
 def test_insert_after_middle_node():
     expected ="{ 5 } -> { 3 } -> { 1 } -> NULL"
     ll = linkedList()
@@ -140,7 +140,7 @@ def test_insert_after_middle_node():
     actual= str(ll)
     assert actual == expected
 
-#@pytest.mark.skip('todo')
+@pytest.mark.skip('todo')
 def test_insert_after():
     expected ="{ 5 } -> { 1 } -> { 3 } -> NULL"
     ll = linkedList()
@@ -148,4 +148,63 @@ def test_insert_after():
     ll.insert(1)
     actual= ll.insert_after(3,1)
     assert actual == expected
+
+#@pytest.mark.skip('todo')
+def test_kthFromEnd_k_greater_length():
+    ll=linkedList()
+    ll.insert(1)
+    ll.insert(8)
+    ll.insert(3)
+    ll.insert(2)
+
+    with pytest.raises(Exception) as exc:
+        actual=ll.kthFromEnd(5)
+    assert "Index out of range" in str(exc.value)
+    assert exc.type == Exception
+
+#@pytest.mark.skip('todo')
+def test_kthFromEnd_k_equal_length():
+    ll=linkedList()
+    ll.insert(1)
+    ll.insert(8)
+    ll.insert(3)
+    ll.insert(2)
+
+    with pytest.raises(Exception) as exc:
+        actual=ll.kthFromEnd(4)
+    assert "Index out of range" in str(exc.value)
+    assert exc.type == Exception
+
+#@pytest.mark.skip('todo')
+def test_kthFromEnd_k_less_zero():
+    ll=linkedList()
+    ll.insert(1)
+    ll.insert(8)
+    ll.insert(3)
+    ll.insert(2)
+
+    with pytest.raises(Exception) as exc:
+        actual=ll.kthFromEnd(-5)
+    assert "k must be non-negative number" in str(exc.value)
+    assert exc.type == Exception
+
+
+#@pytest.mark.skip('todo')
+def test_kthFromEnd_size_1():
+    expected=1
+    ll=linkedList()
+    ll.insert(1)
+    actual=ll.kthFromEnd(0)
+    assert actual==expected
+
+#@pytest.mark.skip('todo')
+def test_kthFromEnd_happy_path():
+    expected=8
+    ll=linkedList()
+    ll.insert(1)
+    ll.insert(8)
+    ll.insert(3)
+    ll.insert(2)
+    actual=ll.kthFromEnd(2)
+    assert actual==expected
 
