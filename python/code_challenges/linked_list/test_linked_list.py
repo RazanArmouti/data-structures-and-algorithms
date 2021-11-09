@@ -208,3 +208,56 @@ def test_kthFromEnd_happy_path():
     actual=ll.kthFromEnd(2)
     assert actual==expected
 
+#@pytest.mark.skip('todo')
+def test_zipLists():
+    expected='{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 6 } -> { 7 } -> { 8 } -> NULL'
+    ll =linkedList()
+    ll2 =linkedList()
+    ll.insert(1)
+    ll.insert(3)
+    ll.insert(5)
+    ll.insert(7)
+    ll2.insert(2)
+    ll2.insert(4)
+    ll2.insert(6)
+    ll2.insert(8)
+    actual=ll.zipLists(ll,ll2)
+    assert actual==expected
+
+#@pytest.mark.skip('todo')
+def test_zipLists_empty_lists():
+     # Arrange
+    excepted='There is no lists to zip'
+     # Act
+    first_ll =linkedList()
+    second_ll =linkedList()
+    actual= first_ll.zipLists(first_ll,second_ll)
+    #Assert
+    assert excepted==actual
+
+#@pytest.mark.skip('todo')
+def test_first_list_empty():
+     # Arrange
+    excepted="{ 5 } -> { 3 } -> { 2 } -> NULL"
+     # Act
+    first_ll =linkedList()
+    second_ll =linkedList()
+    second_ll.insert(5)
+    second_ll.append(3)
+    second_ll.append(2)
+    actual= first_ll.zipLists(first_ll,second_ll)
+    #Assert
+    assert excepted==actual
+
+def test_second_list_empty():
+     # Arrange
+    excepted="{ 5 } -> { 3 } -> { 2 } -> NULL"
+     # Act
+    first_ll =linkedList()
+    second_ll =linkedList()
+    first_ll.insert(5)
+    first_ll.append(3)
+    first_ll.append(2)
+    actual= first_ll.zipLists(first_ll,second_ll)
+    #Assert
+    assert excepted==actual
