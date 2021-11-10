@@ -152,33 +152,35 @@ class linkedList:
                 return result
             current = current.next
 
-    def zipLists(self,list1, list2):
-        """
-        This function Zip the two linked lists together into one so that the nodes alternate
-        between the two lists and return a reference to the head of the zipped list.
+def zipLists(list1, list2):
+    """
+    This function Zip the two linked lists together into one so that the nodes alternate
+     between the two lists and return a reference to the head of the zipped list.
 
-        Arguments: 2 linked lists
-        Return: Linked List, zipped .
+    Arguments: 2 linked lists
+    Return: Linked List, zipped .
 
-        """
-        flist = list1.head
-        slist = list2.head
+    """
+    flist = list1.head
+    slist = list2.head
 
-        if not flist and not slist:
-            return 'There is no lists to zip'
-        elif  not flist :
-            return str(list2)
-        elif not slist:
-            return str(list1)
+    if not flist and not slist:
+        return 'There is no lists to zip'
+    elif  not flist :
+        return str(list2)
+    elif not slist:
+        return str(list1)
 
-        ll =linkedList()
-        while flist and slist:
-            ll.insert(flist.value)
-            ll.insert(slist.value)
-            flist = flist.next
-            slist = slist.next
+    ll =linkedList()
+    while flist or slist:
+        if flist :
+         ll.insert(flist.value)
+         flist = flist.next
+        if slist :
+         ll.insert(slist.value)
+         slist = slist.next
 
-        return (ll.__str__())
+    return (ll.__str__())
 
 
 
@@ -198,7 +200,9 @@ if __name__ =="__main__":
     ll2.insert(4)
     ll2.insert(6)
     ll2.insert(8)
-    y=ll2.zipLists(ll,ll2)
+    ll2.insert(10)
+    ll2.insert(12)
+    y=zipLists(ll,ll2)
     print(y)
     ll.insert_before(3,5)
     print(ll.__str__())
