@@ -221,7 +221,7 @@ def test_zipLists():
     ll2.insert(4)
     ll2.insert(6)
     ll2.insert(8)
-    actual=ll.zipLists(ll,ll2)
+    actual=zipLists(ll,ll2)
     assert actual==expected
 
 #@pytest.mark.skip('todo')
@@ -231,7 +231,7 @@ def test_zipLists_empty_lists():
      # Act
     first_ll =linkedList()
     second_ll =linkedList()
-    actual= first_ll.zipLists(first_ll,second_ll)
+    actual=zipLists(first_ll,second_ll)
     #Assert
     assert excepted==actual
 
@@ -245,7 +245,7 @@ def test_first_list_empty():
     second_ll.insert(5)
     second_ll.append(3)
     second_ll.append(2)
-    actual= first_ll.zipLists(first_ll,second_ll)
+    actual= zipLists(first_ll,second_ll)
     #Assert
     assert excepted==actual
 
@@ -258,6 +258,24 @@ def test_second_list_empty():
     first_ll.insert(5)
     first_ll.append(3)
     first_ll.append(2)
-    actual= first_ll.zipLists(first_ll,second_ll)
+    actual= zipLists(first_ll,second_ll)
     #Assert
     assert excepted==actual
+
+#@pytest.mark.skip('todo')
+def test_zipLists_second_LL_longer():
+    expected='{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 6 } -> { 7 } -> { 8 } -> { 10 } -> { 12 } -> NULL'
+    ll =linkedList()
+    ll2 =linkedList()
+    ll.insert(1)
+    ll.insert(3)
+    ll.insert(5)
+    ll.insert(7)
+    ll2.insert(2)
+    ll2.insert(4)
+    ll2.insert(6)
+    ll2.insert(8)
+    ll2.insert(10)
+    ll2.insert(12)
+    actual=zipLists(ll,ll2)
+    assert actual==expected
