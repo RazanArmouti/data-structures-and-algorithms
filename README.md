@@ -26,4 +26,6 @@ To run your tests
 | 2  | [array insert shift](./python/code_challenges/array-insert-shift/README.md)|
 | 3  | [array binary search](./python/code_challenges/array-binary-search/README.md)|
 | 4  | [linked list](./python/code_challenges/linked_list/README.md)|
+| 5  | [stack and queue](./python/code_challenges/stack_and_queue/README.md)|
+| 6  | [stack queue pseudo](./python/code_challenges/stack_queue_pseudo/README.md)|
 
