@@ -2,7 +2,7 @@
 create cat and dog shelter using your queue implementation
 
 ## Whiteboard Process
-![stack queue animal shelter](stack-queue-animal-shelter .png)
+![shelter](stack-queue-animal-shelter.png)
 
 ## Approach & Efficiency
 I use two queues to implement the animal shelter ,one for the cats ,and another for the dogs
