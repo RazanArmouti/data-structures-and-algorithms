@@ -28,5 +28,5 @@ To run your tests
 | 4  | [linked list](./python/code_challenges/linked_list/README.md)|
 | 5  | [stack and queue](./python/code_challenges/stack_and_queue/README.md)|
 | 6  | [stack queue pseudo](./python/code_challenges/stack_queue_pseudo/README.md)|
-| 6  | [stack and queue animal shelter](./python/code_challenges/stack-queue-animal-shelter/README.md)|
+| 7  | [stack and queue animal shelter](./python/code_challenges/stack_queue_animal_shelter/README.md)|
 
