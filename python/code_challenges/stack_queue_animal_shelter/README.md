@@ -11,4 +11,4 @@ enqueue -> O(1)
 dequeue -> O(1)
 
 ## Solution
-Navegate to `python/code_challenge/stack_and_queue_animal_shelter` then open the termenal and run `poetry shell` the pytest the `stack_and_queue_animal_shelter`
+Navegate to `python/code_challenge/sstack-queue-animal-shelter` then open the termenal and run `poetry shell` the pytest the `stack_and_queue_animal_shelter`
