@@ -1,3 +1,4 @@
+from stack_and_queue.stack import Stack
 def ValidateBrackets(str):
     """
     Multi-bracket Validation: help you to represent whether or not the brackets in the string are balanced
@@ -8,19 +9,29 @@ def ValidateBrackets(str):
     """
     openning_bracket=["{","[","("]
     closing_bracket=["}","]",")"]
-    stack_bracket=[]
+    stack_bracket=Stack()
+    stack_had_brackets = False
 
     for i in str:
         if i in openning_bracket:
-            stack_bracket.append(i)
+            stack_bracket.push(i)
+            stack_had_brackets = True
         elif i in closing_bracket:
-            idx=closing_bracket.index(i)
-            if stack_bracket and (openning_bracket[idx] == stack_bracket[len(stack_bracket)-1]) :
-               stack_bracket.pop()
-    if not stack_bracket :
-        return True
-    else:
-        return False
+            if not stack_bracket.is_empty():
+                bracket = stack_bracket.pop()
+                if closing_bracket.index(i) != openning_bracket.index(bracket):
+                    return False
+                else:
+                    continue
+            else:
+             return False
+    if stack_had_brackets:
+        if stack_bracket.is_empty():
+            return True
+        else:
+            return False
+    return False
+
 
 
 
