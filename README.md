@@ -30,3 +30,4 @@ To run your tests
 | 6  | [stack queue pseudo](./python/code_challenges/stack_queue_pseudo/README.md)|
 | 7  | [stack and queue animal shelter](./python/code_challenges/stack_queue_animal_shelter/README.md)|
 | 8  | [stack queue brackets](./python/code_challenges/stack_queue_brackets/README.md)|
+| 9  | [trees](./python/code_challenges/trees/README.md)|
