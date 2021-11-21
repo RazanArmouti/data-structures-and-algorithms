@@ -103,30 +103,68 @@ class linkedList:
         """
         adds a new node with the given new value immediately before the first node that has the value specified
         """
-        currentnode=self.head
-        if not currentnode:
-            return "NULL"
-        while currentnode.next:
-            if currentnode.next.value==value:
-                newNode=Node(newValue)
-                newNode.next=currentnode.next
-                currentnode.next=newNode
-        currentnode=currentnode.next
+        if self.head is None:
+            print("List has no element")
+            return
+
+        if value == self.head.value:
+            new_node = Node(newValue)
+            new_node.next = self.head
+            self.head = new_node
+            return
+
+        n = self.head
+        print(n.next)
+        while n.next is not None:
+            if n.next.value == value:
+                break
+            n = n.next
+        if n.next is None:
+            print("item not in the list")
+        else:
+            new_node = Node(newValue)
+            new_node.next = n.next
+            n.next = new_node
+        # currentnode=self.head
+        # if not currentnode:
+        #     return "NULL"
+        # while currentnode.next:
+        #     if currentnode.next.value==value:
+        #         newNode=Node(newValue)
+        #         newNode.next=currentnode.next
+        #         currentnode.next=newNode
+        # currentnode=currentnode.next
 
 
     def insert_after(self,value,newValue):
         """
         adds a new node with the given new value immediately after the first node that has the value specified
         """
-        currentNode=self.head
-        if not currentNode.next:
-            return 'the linkedlist is empty'
-        while currentNode.next:
-            if currentNode.value==value:
-                newNode=Node(value)
-                newNode.next=currentNode.next
-                currentNode.next=newNode
-        currentNode=currentNode.next
+        if self.head is None:
+            print("List has no element")
+            return
+        n = self.head
+        print(n.next)
+        while n is not None:
+            if n.value == value:
+                break
+            n = n.next
+        if n is None:
+            print("item not in the list")
+        else:
+            new_node = Node(newValue)
+            new_node.next = n.next
+            n.next = new_node
+
+        # currentNode=self.head
+        # if not currentNode.next:
+        #     return 'the linkedlist is empty'
+        # while currentNode.next:
+        #     if currentNode.value==value:
+        #         newNode=Node(value)
+        #         newNode.next=currentNode.next
+        #         currentNode.next=newNode
+        # currentNode=currentNode.next
         #pass
 
     def kthFromEnd(self,k):
@@ -204,10 +242,11 @@ if __name__ =="__main__":
     ll2.insert(12)
     y=zipLists(ll,ll2)
     print(y)
-    ll.insert_before(3,5)
-    print(ll.__str__())
     ll.insert_after(3,7)
     print(ll.__str__())
+    ll.insert_before(3,5)
+    print(ll.__str__())
+
 
 
 

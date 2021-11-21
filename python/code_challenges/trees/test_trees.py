@@ -5,6 +5,8 @@ Test binary tree class
 from trees import *
 import pytest
 
+from trees import BinarySearchTree, BinaryTree
+
 # def test_version():
 #     assert __version__ == '0.1.0'
 
@@ -91,6 +93,29 @@ def test_tree_add_left_and_right_nodes(tree_1):
     actual = tree_1.pre_order()
     assert actual == expected
 
+#------------ test tree_max method------------------
+#@pytest.mark.skip("todo")
+def test_tree_max_happy_path(tree_4):
+    expected=16
+    actual=tree_4.tree_max()
+    assert expected==actual
+
+#@pytest.mark.skip("todo")
+def test_tree_max_empty_tree():
+    with pytest.raises(Exception):
+        tree=BinaryTree()
+        actual=tree.get_max()
+
+#@pytest.mark.skip("todo")
+def test_tree_max_only_root():
+    expected=1
+    tree=BinarySearchTree()
+    tree.add(1)
+    actual=tree.tree_max()
+    assert expected==actual
+
+#---------------------fixture---------------------------
+
 @pytest.fixture
 def tree_1():
     tree = BinarySearchTree()
@@ -123,6 +148,15 @@ def tree_3():
     a_node.right = c_node
     b_node.left = d_node
     tree.root = a_node
+    return tree
+
+@pytest.fixture
+def tree_4():
+    tree=BinarySearchTree()
+    tree.add(10)
+    tree.add(5)
+    tree.add(1)
+    tree.add(16)
     return tree
 
 

@@ -31,3 +31,4 @@ To run your tests
 | 7  | [stack and queue animal shelter](./python/code_challenges/stack_queue_animal_shelter/README.md)|
 | 8  | [stack queue brackets](./python/code_challenges/stack_queue_brackets/README.md)|
 | 9  | [trees](./python/code_challenges/trees/README.md)|
+| 10  | [tree Max](./python/code_challenges/README_tree_max/README.md)|

@@ -93,7 +93,7 @@ def test_append_many_nodes():
     actual= str(ll)
     assert actual == expected
 
-@pytest.mark.skip('todo')
+#@pytest.mark.skip('todo')
 def test_insert_before_first_node():
     expected="{ 1 } -> { 2 } -> { 3 } -> NULL"
     ll = linkedList()
@@ -103,7 +103,7 @@ def test_insert_before_first_node():
     actual= ll.__str__()
     assert actual==expected
 
-@pytest.mark.skip('todo')
+#@pytest.mark.skip('todo')
 def test_insert_before_middle_node():
     expected ="{ 5 } -> { 1 } -> { 3 } -> NULL"
     ll = linkedList()
@@ -113,7 +113,7 @@ def test_insert_before_middle_node():
     actual= str(ll)
     assert actual == expected
 
-@pytest.mark.skip('todo')
+#@pytest.mark.skip('todo')
 def test_insert_before_empty_list():
     expected ="NULL"
     ll = linkedList()
@@ -121,32 +121,32 @@ def test_insert_before_empty_list():
     actual= str(ll)
     assert actual == expected
 
-@pytest.mark.skip('todo')
+#@pytest.mark.skip('todo')
 def test_insert_after_list_empty():
-    expected ="the linkedlist is empty"
+    expected =None
     ll = linkedList()
-    ll.insert(3)
-    ll.insert(7)
     actual= ll.insert_after(3,7)
     assert actual == expected
 
-@pytest.mark.skip('todo')
+#@pytest.mark.skip('todo')
 def test_insert_after_middle_node():
-    expected ="{ 5 } -> { 3 } -> { 1 } -> NULL"
+    expected ="{ 5 } -> { 10 } -> { 17 } -> NULL"
     ll = linkedList()
-    ll.insert(1)
-    ll.insert(3)
-    ll.insert_after(5,3)
+    ll.insert(5)
+    ll.insert(10)
+    ll.insert_after(10,17)
     actual= str(ll)
     assert actual == expected
 
-@pytest.mark.skip('todo')
+#@pytest.mark.skip('todo')
 def test_insert_after():
-    expected ="{ 5 } -> { 1 } -> { 3 } -> NULL"
+    expected ="{ 5 } -> { 17 } -> { 10 } -> { 20 } -> NULL"
     ll = linkedList()
     ll.insert(5)
-    ll.insert(1)
-    actual= ll.insert_after(3,1)
+    ll.insert(10)
+    ll.insert(20)
+    ll.insert_after(5,17)
+    actual= str(ll)
     assert actual == expected
 
 #@pytest.mark.skip('todo')
