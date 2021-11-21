@@ -3,7 +3,7 @@
 Find the maximum value stored in the tree
 
 ## Whiteboard Process
-![max_tree](max_tree.png)
+![max_tree](tree_max.png)
 
 ## Approach & Efficiency
 I use helper function inside the get-max method to do the recaerssion staff and finding the max number
