@@ -36,6 +36,8 @@ class BinaryTree:
     1. pre order
     2. in order
     3. post order : returns an array of the values, ordered appropriately
+    4. tree_max: returns numbers as maximum value in the tree
+
     """
     def __init__(self):
         self.root=None
@@ -100,6 +102,20 @@ class BinaryTree:
         _traversal(self.root)
         return list_of_items
 
+    def tree_max(self):
+        if not self.root:
+            raise Exception("Empty Tree!")
+
+        self.maxNo=self.root.data
+        def get_max(node):
+            if node.data>self.maxNo:
+                self.maxNo=node.data
+            if node.left:
+                get_max(node.left)
+            if node.right:
+                get_max(node.right)
+            return self.maxNo
+        return get_max(self.root)
 
 
 class BinarySearchTree(BinaryTree):
