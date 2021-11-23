@@ -14,6 +14,10 @@ class Node:
         self.data=data
         self.left=left
         self.right=right
+class Node_:
+    def __init__ (self,data):
+        self.data = data
+        self.child = []
 
 class Queue:
     def __init__(self,collection=[]):
@@ -41,6 +45,7 @@ class BinaryTree:
     """
     def __init__(self):
         self.root=None
+
 
     def bfs(self):
         """
