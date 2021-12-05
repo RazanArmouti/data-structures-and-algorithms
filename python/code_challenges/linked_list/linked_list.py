@@ -9,7 +9,9 @@ class Node:
      Methods
      -------
      __init__(value, next_):
-     the constructor method for the class, it takes two parameters, the value parameter is the a reference to the data the node will hold,
+     the constructor method for the class, it takes two parameters,
+
+     /e value parameter is the a reference to the data the node will hold,
      and the next_
 
     """
