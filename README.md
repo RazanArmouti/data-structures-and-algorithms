@@ -34,5 +34,6 @@ To run your tests
 | 10  | [tree Max](./python/code_challenges/trees/README_tree_max.md)|
 | 11  | [tree breadth first](./python/code_challenges/trees/README_tree_breadth_first.md)|
 | 12  | [tree fizz buzz](./python/code_challenges/trees/README_tree_fizz_buzz.md)|
+| 13  | [insertion sort](./python/code_challenges/insertion_sort/BLOG.md)|
 
 
