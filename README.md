@@ -36,4 +36,5 @@ To run your tests
 | 12  | [tree fizz buzz](./python/code_challenges/trees/README_tree_fizz_buzz.md)|
 | 13  | [insertion sort](./python/code_challenges/insertion_sort/BLOG.md)|
 | 14  | [merge sort](./python/code_challenges/merge_sort/README.md)|
+| 15  | [quick sort](./python/code_challenges/quick_sort/README.md)|
 
