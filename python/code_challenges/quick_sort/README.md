@@ -5,7 +5,7 @@ Review the pseudocode for **Quick sort**, then trace the algorithm by stepping t
 [blog](BLOG.md)
 
 ## Whiteboard Process
-![quick-sort](quick-sort.png)
+![quick-sort](quick_sort.png)
 
 ## Approach & Efficiency
 - Time : O(nLogn).
