@@ -10,6 +10,8 @@ Review the pseudocode for **Quick sort**, then trace the algorithm by stepping t
 ## Approach & Efficiency
 - Time : O(nLogn).
 - space : O(1)
+This is a divide-and-conquer algorithm, so, best case, it takes O(n log n) time—that’s n steps to partition the array, log n times.
+Since at any step in the process, it only swaps elements within the array, it uses O(1) space.
 
 ## Solution
 after cloneing the repo navigate to `python/code_challenges/quick_sort ` directory then run `poetry shell` and `poerty install` then run `pytest`
