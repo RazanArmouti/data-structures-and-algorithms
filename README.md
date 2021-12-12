@@ -38,4 +38,5 @@ To run your tests
 | 14  | [merge sort](./python/code_challenges/merge_sort/README.md)|
 | 15  | [quick sort](./python/code_challenges/quick_sort/README.md)|
 | 16  | [Hash Table](./python/code_challenges/hash_table/README.md)|
+| 17  | [hashmap repeated word](./python/code_challenges/hash_table/Repated_README.md)|
 
