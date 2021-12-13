@@ -38,7 +38,7 @@ class linkedList:
     def __init__(self):
         self.head = None
 
-    def insert(self, value):
+    def insert(self, value): 
         """
         This function adds a new node with that value to the head of the list
         arguments:
