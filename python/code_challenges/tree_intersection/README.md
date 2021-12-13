@@ -2,7 +2,7 @@
 Find common values in 2 binary trees using hash map
 
 ## Whiteboard Process
-![tree_intersection](tree_intersection.png)
+![tree_intersection](tree-intersection.png)
 
 ## Approach & Efficiency
 - Time : O(n^2)
