@@ -2,7 +2,7 @@ from hash_table import HashTable
 from hashmap_left_join import left_join
 import pytest
 
-#@pytest.mark.skip('todo')
+@pytest.mark.skip('todo')
 def test_left_join_hashmap_happy_path():
     first_hash_table = HashTable()
     first_hash_table.add("person", "23")
@@ -26,7 +26,7 @@ def test_left_join_hashmap_happy_path():
     actual = left_join(first_hash_table, second_hash_table)
     assert actual == expected
 
-#@pytest.mark.skip('todo')
+@pytest.mark.skip('todo')
 def test_left_join_hashmap_with_first_hashmap_empty():
     first_hash_table = HashTable()
     second_hash_table = HashTable()
@@ -40,7 +40,7 @@ def test_left_join_hashmap_with_first_hashmap_empty():
     actual = left_join(first_hash_table, second_hash_table)
     assert actual == expected
 
-#@pytest.mark.skip('todo')
+@pytest.mark.skip('todo')
 def test_left_join_hashmap_with_second_hashmap_empty():
     first_hash_table = HashTable()
     first_hash_table.add("person", "45")
@@ -59,7 +59,7 @@ def test_left_join_hashmap_with_second_hashmap_empty():
     actual = left_join(first_hash_table, second_hash_table)
     assert actual == expected
 
-#@pytest.mark.skip('todo')
+@pytest.mark.skip('todo')
 def test_left_join_hashmap_with_hashmaps_empty():
         first_hash_table = HashTable()
         second_hash_table = HashTable()
