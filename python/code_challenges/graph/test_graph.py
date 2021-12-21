@@ -94,6 +94,7 @@ def test_graph_get_neighbors():
 
     assert neighbor_edge.weight == 44
 
+#@pytest.mark.skip('todo')
 def test_breadth_first():
     graph = Graph()
 
@@ -109,4 +110,36 @@ def test_breadth_first():
 
     expected = 'blue ,pink ,red ,yellow ,'
     actual = graph.breadth_first(blue)
+    assert actual == expected
+
+#@pytest.mark.skip('todo')
+def test_graph_depth_first():
+    graph = Graph()
+
+    a = graph.add_node('A')
+    b = graph.add_node('B')
+    c = graph.add_node('C')
+    d = graph.add_node('D')
+    e = graph.add_node('E')
+    f = graph.add_node('F')
+    g = graph.add_node('G')
+    h = graph.add_node('H')
+
+    graph.add_edge(a,b)
+    graph.add_edge(a,d)
+
+    graph.add_edge(b,c)
+    graph.add_edge(b,d)
+
+    graph.add_edge(c,g)
+
+    graph.add_edge(d,e)
+    graph.add_edge(d,h)
+    graph.add_edge(d,f)
+
+    graph.add_edge(f,h)
+
+
+    expected = ['A', 'B', 'C', 'G', 'D', 'E', 'H', 'F']
+    actual = graph.depth_first(a)
     assert actual == expected
