@@ -140,5 +140,24 @@ class Graph:
 
         return final_result
 
+    def depth_first(self ,start_vertex):
+        """
+        Arguments: Node (Starting point of search)
+        Return: A collection of nodes in their pre-order depth-first traversal order
+
+        """
+        list_of_items = []
+        list_of_items.append(start_vertex.value)
+
+        def walk(vertex):
+            edge =self.__adjacency_list[vertex]
+            for v in edge:
+                my_vertex = v.vertex.value
+                if my_vertex not in list_of_items:
+                    list_of_items.append(my_vertex)
+                    walk(v.vertex)
+        walk(start_vertex)
+        return list_of_items
+
 
 

@@ -43,5 +43,6 @@ To run your tests
 | 19  | [hashmap_left_join](./python/code_challenges/hashmap_left_join/README.md)|
 | 20  | [graph](./python/code_challenges/graph/README.md)|
 | 21  | [Business Trip](./python/code_challenges/graph/graph_business_trip_README.md)|
+| 22  | [graph_depth_first](./python/code_challenges/graph/graph_depth_first_README.md)|
 
 
